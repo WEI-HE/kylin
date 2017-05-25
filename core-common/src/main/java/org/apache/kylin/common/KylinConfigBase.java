@@ -114,7 +114,7 @@ abstract public class KylinConfigBase implements Serializable {
         return property != null ? property : properties.getProperty(prop, dft);
     }
 
-    protected Properties getAllProperties() {
+    public Properties getAllProperties() {
         return properties;
     }
 
@@ -163,7 +163,7 @@ abstract public class KylinConfigBase implements Serializable {
         properties.setProperty(BCC.check(key), value);
     }
 
-    final protected void reloadKylinConfig(Properties properties) {
+    final public void reloadKylinConfig(Properties properties) {
         this.properties = BCC.check(properties);
     }
 
